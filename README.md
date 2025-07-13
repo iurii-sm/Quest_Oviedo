@@ -1,2 +1,2 @@
-# Kvest_Oviedo
-Kvest for teenagers in Oviedo
+# Quest_Oviedo
+Quest for teenagers in Oviedo
