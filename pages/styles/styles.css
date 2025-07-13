@@ -1,0 +1,98 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Fira+Sans&display=swap');
+
+html, body {
+  height: auto;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Fira Sans', sans-serif;
+  background: linear-gradient(135deg, #1e1e2f, #32325d);
+  color: #f0f0f0;
+  padding: 2em;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  background-color: #27293d;
+  border-radius: 16px;
+  padding: 2em;
+  box-shadow: 0 0 20px rgba(0,0,0,0.6);
+}
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  color: #ffcc00;
+  text-align: center;
+  margin-bottom: 0.5em;
+  font-size: 2rem;
+}
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
+  margin-top: 1.2em;
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.6em;
+}
+
+strong {
+  color: #ffcc00;
+}
+
+em {
+  color: #ffcc00;
+  font-style: italic;
+}
+
+em2 {
+  color: #9b0068d1;
+  font-style: italic;
+}
+
+pm {
+  color: #939393;
+  font-style: italic;
+}
+
+pm2 {
+  color: #ffffff;
+  font-style: italic;
+}
+
+.centered {
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 1em;
+  }
+
+  .container {
+    padding: 1.2em;
+    border-radius: 12px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 1em;
+  }
+}
