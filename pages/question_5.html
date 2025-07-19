@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Вопрос 5</title>
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Вопрос №5</h1>
+    <h2>СИМВОЛ КОРОЛЕВСКОГО ГОРОДА (XIII ВЕК)</h2>
+    <p><br>В средние века в Испании были разные типы поселений: одни принадлежали феодалам, другие — церкви, а самые
+      особенные — непосредственно королю.
+      <br>Овьедо был таким особенным городом. По решению короля Альфонсо IX, вокруг города в XIII веке была построена
+      стена. Она служила не только защитой, но и символом особого статуса Овьедо как города короля.
+      <br>У города были особые права: автономия в управлении, собственные суды, льготы для торговли и поселения, а также
+      защита самого монарха.
+      <br>Со временем город рос, стена стала мешать и ее снесли, но некоторые ее части до сих пор стоят и украшают
+      город. <em2>Вам нужна самая длинная сохранившаяся часть</em2>.
+    </p>
+    <p><strong>Для ответа надо:</strong>
+      <br>Найти историческую стену и сделать фото с деревом на камнях (вы поймете, что это оно, когда увидите).
+    </p>
+  </div>
+  <div class="navigation-buttons">
+    <a id="backButton" class="question-button">Назад</a>
+    <a id="nextButton" class="question-button">Вперед</a>
+  </div>
+
+  <script>
+    // Определяем текущий номер страницы из URL
+    const path = window.location.pathname;
+    const match = path.match(/question_(\d+)\.html$/);
+
+    if (match) {
+      const current = parseInt(match[1], 10);
+      const prev = current - 1;
+      const next = current + 1;
+
+      const backButton = document.getElementById("backButton");
+      const nextButton = document.getElementById("nextButton");
+
+      // Назад
+      if (prev >= 1) {
+        backButton.href = `question_${prev}.html`;
+      } else {
+        backButton.style.display = "none";
+      }
+
+      // Вперед
+      if (next <= 20) { // Укажи здесь макс. номер
+        nextButton.href = `question_${next}.html`;
+      } else {
+        nextButton.style.display = "none";
+      }
+    }
+  </script>
+</body>
+
+</html>

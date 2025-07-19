@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Вопрос 4</title>
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Вопрос №4</h1>
+    <h2>MINISTERIO DE TRABAJO</h2>
+    <p><br>В Испании по инициативе Ministerio de Trabajo (Министерства труда) с 1953 года начали строить дома для
+      малообеспеченных семей с дешёвой арендой. Такие дома назывались <strong><em>"de&nbsp;renta limitada"</em></strong>
+      — с ограниченной платой за жильё.
+      <br>Государство помогало людям жить недорого, если у них была низкая зарплата. На дом ставили табличку, чтобы было
+      видно, что он «льготный».
+    </p>
+    <p><strong>Для ответа надо:</strong>
+      <br>Найти такую табличку и сделать фото на ее фоне.
+      <br>
+      <em2>Найти ее можно где-то между этими точками - координаты тут ….</em2>
+    </p>
+  </div>
+  <div class="navigation-buttons">
+    <a id="backButton" class="question-button">Назад</a>
+    <a id="nextButton" class="question-button">Вперед</a>
+  </div>
+
+  <script>
+    // Определяем текущий номер страницы из URL
+    const path = window.location.pathname;
+    const match = path.match(/question_(\d+)\.html$/);
+
+    if (match) {
+      const current = parseInt(match[1], 10);
+      const prev = current - 1;
+      const next = current + 1;
+
+      const backButton = document.getElementById("backButton");
+      const nextButton = document.getElementById("nextButton");
+
+      // Назад
+      if (prev >= 1) {
+        backButton.href = `question_${prev}.html`;
+      } else {
+        backButton.style.display = "none";
+      }
+
+      // Вперед
+      if (next <= 20) { // Укажи здесь макс. номер
+        nextButton.href = `question_${next}.html`;
+      } else {
+        nextButton.style.display = "none";
+      }
+    }
+  </script>
+</body>
+
+</html>

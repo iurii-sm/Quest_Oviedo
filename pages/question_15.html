@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>
+        Вопрос 15
+    </title>
+    <link href="styles/styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>Вопрос №15</h1>
+        <h2>ПОЛЁТ НА ЮГ</h2>
+        <p><br>
+        Мы любим исследовать города и новые страны. Узнавать новые культуры и языки. Поэтому пора выбирать
+        <em>перелет</em>.<br><br>
+
+        Кстати, вы знаете, что в 1903 году американцы братья Райт совершили первый в мире управляемый полёт на
+        самолёте, оснащенном двигателем. Полет длился всего 12 секунд и стал началом новой эры
+        авиации.<br><br>
+
+        А вот наш напарник куда-то пропал и надо его найти. Единственное, что у нас есть это фото билета и записка. Попробуем
+        выяснить, где же его искать:
+        </p>
+        <div class="container">
+            Билет на самолет.
+        <p class="centered">
+            <a href="../images/8.jpg" target="_blank">
+            <img src="../images/8.jpg" alt="фото8" width="400">
+            </a>
+        </p>
+        </div>
+<br>
+        <div class="container">
+            Оставленная записка.
+        <p class="centered">
+            <h3>“... дальше из того же аэропорта, той же компанией, в 20:10…”</h3> 
+        </p>
+        </div>
+        <p>
+            <strong>
+                Для ответа надо:
+            </strong>
+            <br />
+            Сделать фото с названием.
+        </p>
+    </div>
+    <div class="navigation-buttons">
+        <a id="backButton" class="question-button">Назад</a>
+        <a id="nextButton" class="question-button">Вперед</a>
+    </div>
+
+    <script>
+        // Определяем текущий номер страницы из URL
+        const path = window.location.pathname;
+        const match = path.match(/question_(\d+)\.html$/);
+
+        if (match) {
+            const current = parseInt(match[1], 10);
+            const prev = current - 1;
+            const next = current + 1;
+
+            const backButton = document.getElementById("backButton");
+            const nextButton = document.getElementById("nextButton");
+
+            // Назад
+            if (prev >= 1) {
+                backButton.href = `question_${prev}.html`;
+            } else {
+                backButton.style.display = "none";
+            }
+
+            // Вперед
+            if (next <= 20) { // Укажи здесь макс. номер
+                nextButton.href = `question_${next}.html`;
+            } else {
+                nextButton.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>

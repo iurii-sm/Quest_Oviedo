@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>
+        Вопрос 12
+    </title>
+    <link href="styles/styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>
+            Вопрос №12
+        </h1>
+        <h2>АЛФАВИТНАЯ АБРАКАДАБРА</h2>
+        <p><br>
+            Живем в Астуриас и, видимо, придется снова разгадывать <em>bable</em> - астурийский язык или диалект,
+            называйте как
+            хотите.<br>
+
+            Наш гид-связной куда-то пропал в этом городе: <strong>НБЫДГН</strong>. Разгадав, что это за город (на русском) -
+            вы сможете понять как расшифровать и секретный объект (на испанском), который находится на <pm>Calle San Isidoro</pm>. 
+            <div class="container">
+                Секретное послание: <h3>NDQT KZ BTQTWZ</h3>
+            </div>
+        </p>
+        <p>
+            <strong>
+                Для ответа надо:
+            </strong>
+            <br />
+            Сделать фото с названием.
+        </p>
+    </div>
+    <div class="navigation-buttons">
+        <a id="backButton" class="question-button">Назад</a>
+        <a id="nextButton" class="question-button">Вперед</a>
+    </div>
+
+    <script>
+        // Определяем текущий номер страницы из URL
+        const path = window.location.pathname;
+        const match = path.match(/question_(\d+)\.html$/);
+
+        if (match) {
+            const current = parseInt(match[1], 10);
+            const prev = current - 1;
+            const next = current + 1;
+
+            const backButton = document.getElementById("backButton");
+            const nextButton = document.getElementById("nextButton");
+
+            // Назад
+            if (prev >= 1) {
+                backButton.href = `question_${prev}.html`;
+            } else {
+                backButton.style.display = "none";
+            }
+
+            // Вперед
+            if (next <= 20) { // Укажи здесь макс. номер
+                nextButton.href = `question_${next}.html`;
+            } else {
+                nextButton.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>

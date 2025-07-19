@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Вопрос 7</title>
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Вопрос №7</h1>
+    <h2>МОНАХ-БЛОГЕР</h2>
+    <p>
+      <br>В Овьедо есть небольшая площадь с каменной статуей. Когда-то здесь жил монах - <pm2>научпоп-блогер XVIII века.
+      </pm2>
+      Только вместо YouTube - у него были перо и бумага.
+      <br>Он не верил в чудеса на слово. Писал книги, где объяснял, что звуки в подвале - это не духи, а, скорее всего,
+      крысы, и что луна не влияет на твои сны, как бы романтично это ни звучало. Его любимая фраза была:</p>
+    <div class="container">
+      <p class="centered"><em>«Не всё, что говорят священники, врачи и учёные - истина. Думай сам!»</em></p>
+    </div>
+<p>
+    <br>В 1726 году он выпустил знаменитое эссе - «В защиту женщин». Это был настоящий скандал для XVIII века из-за
+    того, что большинство людей (особенно мужчин) считали, что женщинам не нужно учиться, потому что «они всё равно
+    глупее».
+    А он открыто писал:</p>
+    <br>
+    <div class="container">
+      <p class="centered">
+        <em>«Женщины не хуже мужчин по уму, логике или способностям.<br>Просто у них нет таких же возможностей для образования.
+          <br>Если бы женщины учились наравне с мужчинами, <br>они могли бы даже превзойти их в некоторых науках».</em>
+          </p>
+    </div>
+    <p>Сейчас на этой площади стоит его памятник. Люди проходят мимо, делают селфи, а он всё так же стоит с книгой.<br><br>
+    А теперь посмотри на картинку - это подсказка:<br>
+    </p>
+    <p class="centered">
+      <a href="../images/2.jpg" target="_blank">
+      <img src="../images/2.jpg" alt="фото" width="400">
+      </a>
+    </p>
+    <p><strong>Для ответа надо:</strong>
+      <br>Сделать фото с памятником.
+    </p>
+  </div>
+  <div class="navigation-buttons">
+    <a id="backButton" class="question-button">Назад</a>
+    <a id="nextButton" class="question-button">Вперед</a>
+  </div>
+
+  <script>
+    // Определяем текущий номер страницы из URL
+    const path = window.location.pathname;
+    const match = path.match(/question_(\d+)\.html$/);
+
+    if (match) {
+      const current = parseInt(match[1], 10);
+      const prev = current - 1;
+      const next = current + 1;
+
+      const backButton = document.getElementById("backButton");
+      const nextButton = document.getElementById("nextButton");
+
+      // Назад
+      if (prev >= 1) {
+        backButton.href = `question_${prev}.html`;
+      } else {
+        backButton.style.display = "none";
+      }
+
+      // Вперед
+      if (next <= 20) { // Укажи здесь макс. номер
+        nextButton.href = `question_${next}.html`;
+      } else {
+        nextButton.style.display = "none";
+      }
+    }
+  </script>
+</body>
+
+</html>

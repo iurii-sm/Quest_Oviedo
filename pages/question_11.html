@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>
+        Вопрос 11
+    </title>
+    <link href="styles/styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>Вопрос №11</h1>
+        <h2>ЧАСТЬ КОМАНДЫ - ЧАСТЬ КОРАБЛЯ</h2>
+        <p><br>
+            Всегда важно прокачать логику и знание языков.
+            Так, например, в английском есть интересное выражение - <em>"walk a mile in someone's shoes"</em>. Дословно она
+            переводится как “Пройти милю в чьих-то туфлях”, а означает - поставить себя на место другого человека, чтобы
+            понять его чувства и опыт. В русском тоже есть похожее по смыслу выражение, и оно поможет вам отгадать
+            первую часть этой загадки. <em>Итак, поиграем в ассоциации!</em><br>
+
+        <div class="container">
+            Часть 1: Найдите общее слово для этих картинок:
+            <p class="centered">
+                <a href="../images/5.jpg" target="_blank">
+                <img src="../images/5.jpg" alt="фото1" width="400">
+                </a>
+                <a href="../images/6.jpg" target="_blank">
+                <img src="../images/6.jpg" alt="фото2" width="400">
+                </a>
+            </p>
+        </div>
+        <p>
+        <div class="container">
+            Часть 2: Теперь найдите общее слово для этих картинок:
+            <p class="centered">
+                <a href="../images/3.jpg" target="_blank">
+                <img src="../images/3.jpg" alt="фото3" width="400">
+                </a>
+                <a href="../images/4.jpg" target="_blank">
+                <img src="../images/4.jpg" alt="фото4" width="400">
+                </a>
+            </p>
+        </div>
+        <div class="container">
+            <p>
+            Часть 3: Объедините найденные слова <em>(на испанском)</em>.<br>
+            Ответом будет место, куда вам надо.
+            </p>
+        </div>
+        <p>
+            <strong>
+                Для ответа надо:
+            </strong>
+            <br />
+            Сделать фото с названием.
+        </p>
+    </div>
+        <p>
+    <div class="navigation-buttons">
+        <a id="backButton" class="question-button">Назад</a>
+        <a id="nextButton" class="question-button">Вперед</a>
+        </p>
+    </div>
+
+    <script>
+        // Определяем текущий номер страницы из URL
+        const path = window.location.pathname;
+        const match = path.match(/question_(\d+)\.html$/);
+
+        if (match) {
+            const current = parseInt(match[1], 10);
+            const prev = current - 1;
+            const next = current + 1;
+
+            const backButton = document.getElementById("backButton");
+            const nextButton = document.getElementById("nextButton");
+
+            // Назад
+            if (prev >= 1) {
+                backButton.href = `question_${prev}.html`;
+            } else {
+                backButton.style.display = "none";
+            }
+
+            // Вперед
+            if (next <= 20) { // Укажи здесь макс. номер
+                nextButton.href = `question_${next}.html`;
+            } else {
+                nextButton.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>

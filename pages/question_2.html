@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Вопрос 2</title>
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Вопрос №2</h1>
+    <h2>ШПИОНСКИЕ ТАЙНЫ</h2>
+    <p>
+      <br>Как настоящий шпион вы договорились встретиться с секретным агентом.
+      <br>Он передал вам записку с зашифрованным названием места встречи. В записке написано:
+    </p>
+    <div class="container">
+      <p class="centered">
+        <em>
+          "Представьте, что вы находитесь в Estados Unidos.<br>
+          Вам надо прогуляться по одной из самых знаменитых улиц в городе ангелов - но как она называется?<br>
+          А также как и фильм, получивший три оскара в 1951 году и вошедший в Национальный реестр фильмов США как
+          культурно значимый.<br>
+          Так же называется еще и знаменитый мюзикл."
+        </em>
+      </p>
+    </div>
+    <p>
+      <strong>Для ответа надо:</strong>
+      <br>Прийти на место встречи и сделать фото с названием.
+    </p>
+  </div>
+  <div class="navigation-buttons">
+    <a id="backButton" class="question-button">Назад</a>
+    <a id="nextButton" class="question-button">Вперед</a>
+  </div>
+
+  <script>
+    // Определяем текущий номер страницы из URL
+    const path = window.location.pathname;
+    const match = path.match(/question_(\d+)\.html$/);
+
+    if (match) {
+      const current = parseInt(match[1], 10);
+      const prev = current - 1;
+      const next = current + 1;
+
+      const backButton = document.getElementById("backButton");
+      const nextButton = document.getElementById("nextButton");
+
+      // Назад
+      if (prev >= 1) {
+        backButton.href = `question_${prev}.html`;
+      } else {
+        backButton.style.display = "none";
+      }
+
+      // Вперед
+      if (next <= 20) { // Укажи здесь макс. номер
+        nextButton.href = `question_${next}.html`;
+      } else {
+        nextButton.style.display = "none";
+      }
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Вопрос 6</title>
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Вопрос №6</h1>
+    <h2>СКАНДИНАВСКИЙ ЭПОС</h2>
+    <p>
+      <br>
+      Если вы знаете этих братьев, то вспомните и их отца.<br>
+      Но речь не о нем, а о его храбрых воительницах, которые летали над воинами и забирали павших в
+      <em>Вальгаллу</em>.<br>
+    <div class="container">
+      <p class="centered">
+        <a href="../images/1.jpg" target="_blank">
+        <img src="../images/1.jpg" alt="фото" width="400">
+        </a>
+      </p>
+    </div>
+    <p><br>
+      А самая известная из них осталась в памяти,так как ослушалась повелителя. Настоящая скандинавская драма, одна из
+      самых трогательных и печальных историй мифологии. И имя ей <em>Брунгильда</em> (“brunn” = броня и “hild” = битва,
+      то есть «та, что в броне и ведёт бой»).<br>
+      Хоть время и стирает слова и буквы, но надпись хранит память о них - настоящих воительницах.
+
+
+    </p>
+    <p><strong>Для ответа надо:</strong>
+      <br>Сделать фото с их названием.
+      <br>
+      <em2>Найти упоминание о них можно рядом с этим местом …..???</em2>
+    </p>
+  </div>
+  <div class="navigation-buttons">
+    <a id="backButton" class="question-button">Назад</a>
+    <a id="nextButton" class="question-button">Вперед</a>
+  </div>
+
+  <script>
+    // Определяем текущий номер страницы из URL
+    const path = window.location.pathname;
+    const match = path.match(/question_(\d+)\.html$/);
+
+    if (match) {
+      const current = parseInt(match[1], 10);
+      const prev = current - 1;
+      const next = current + 1;
+
+      const backButton = document.getElementById("backButton");
+      const nextButton = document.getElementById("nextButton");
+
+      // Назад
+      if (prev >= 1) {
+        backButton.href = `question_${prev}.html`;
+      } else {
+        backButton.style.display = "none";
+      }
+
+      // Вперед
+      if (next <= 20) { // Укажи здесь макс. номер
+        nextButton.href = `question_${next}.html`;
+      } else {
+        nextButton.style.display = "none";
+      }
+    }
+  </script>
+</body>
+
+</html>

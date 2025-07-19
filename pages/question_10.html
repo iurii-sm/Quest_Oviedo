@@ -1,25 +1,65 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Вопрос 10</title>
   <link rel="stylesheet" href="styles/styles.css">
 </head>
+
 <body>
   <div class="container">
     <h1>Вопрос №10</h1>
     <h2>ДОЛОЙ СУЕВЕРИЯ</h2>
     <p>
-<br>Чтобы изменить отношение людей к одному из суеверий, в Испании, в том числе и в Овьедо, приюты в октябре проводят <strong>ИХ</strong> День.
-<br>
-<br>В этот день волонтёры рассказывают, что <strong>ОНИ</strong> такие же добрые, красивые и весёлые, как любые другие. Приюты устраивают открытые дни, делают бесплатное усыновление, выкладывают фото в соцсетях и дарят подарки.
-Так Овьедо помогает найти дом тем, кто немного отличается от других.
-<br>
-<br>Кстати, есть в Овьедо <pm2>темная улица, которая укажет путь к нужному месту</pm2>.
+      <br>Чтобы изменить отношение людей к одному из суеверий, в Испании, в том числе и в Овьедо, приюты в октябре
+      проводят <strong>ИХ</strong> День.
+      <br>
+      <br>В этот день волонтёры рассказывают, что <strong>ОНИ</strong> такие же добрые, красивые и весёлые, как любые
+      другие. Приюты устраивают открытые дни, делают бесплатное усыновление, выкладывают фото в соцсетях и дарят
+      подарки.
+      Так Овьедо помогает найти дом тем, кто немного отличается от других.
+      <br>
+      <br>Кстати, есть в Овьедо <pm2>темная улица, которая укажет путь к нужному месту</pm2>.
     </p>
     <p><strong>Для ответа надо:</strong>
-      <br>Сделать фото с названием.</p>
+      <br>Сделать фото с названием.
+    </p>
   </div>
+  <div class="navigation-buttons">
+    <a id="backButton" class="question-button">Назад</a>
+    <a id="nextButton" class="question-button">Вперед</a>
+  </div>
+
+  <script>
+    // Определяем текущий номер страницы из URL
+    const path = window.location.pathname;
+    const match = path.match(/question_(\d+)\.html$/);
+
+    if (match) {
+      const current = parseInt(match[1], 10);
+      const prev = current - 1;
+      const next = current + 1;
+
+      const backButton = document.getElementById("backButton");
+      const nextButton = document.getElementById("nextButton");
+
+      // Назад
+      if (prev >= 1) {
+        backButton.href = `question_${prev}.html`;
+      } else {
+        backButton.style.display = "none";
+      }
+
+      // Вперед
+      if (next <= 20) { // Укажи здесь макс. номер
+        nextButton.href = `question_${next}.html`;
+      } else {
+        nextButton.style.display = "none";
+      }
+    }
+  </script>
 </body>
+
 </html>

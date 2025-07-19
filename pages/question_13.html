@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>
+        Вопрос 13
+    </title>
+    <link href="styles/styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>Вопрос №13</h1>
+        <h2>РАДИОВОЛНА FM</h2>
+        <p><br>
+            Весной этого года во всей Испании произошло аварийное отключение электричества - такие ситуации называются
+            <em>“блэкаут”</em>. Не было ни интернета, ни телевидения и единственным способом узнавать новости было радио.<br><br>
+
+            Первая радиостанция открылась в Овьедо ровно 100 лет назад. На ней шли концерты, новости и спортивные
+            трансляции.<br><br>
+
+            А в 1980-х годах в городе появилось <em>анархистское, свободное радио</em>, которое не принадлежит ни государству, ни
+            корпорациям. На его волнах обсуждают социальные, культурные и политические темы, часто с критическим и анархическим
+            взглядом. Туда приглашают людей, которые не попадают в традиционные каналы из-за своей жизненной позиции,
+            политических взглядов или творчества. <pm2>Сейчас это одно из старейших независимых радио в Испании.</pm2><br><br>
+
+            У этого радио есть и народное название, найти <em>ЕГО</em> поможет слово, загаданное звездочками: 
+            <div class="container">
+                <h3>“Радио *** ” боится “Радио Тапок”</h3>
+            </div>
+        </p>
+        <p>
+            <strong>
+                Для ответа надо:
+            </strong>
+            <br>
+            Сделать фото с названием.
+        </p>
+    </div>
+    <div class="navigation-buttons">
+        <a id="backButton" class="question-button">Назад</a>
+        <a id="nextButton" class="question-button">Вперед</a>
+    </div>
+
+    <script>
+        // Определяем текущий номер страницы из URL
+        const path = window.location.pathname;
+        const match = path.match(/question_(\d+)\.html$/);
+
+        if (match) {
+            const current = parseInt(match[1], 10);
+            const prev = current - 1;
+            const next = current + 1;
+
+            const backButton = document.getElementById("backButton");
+            const nextButton = document.getElementById("nextButton");
+
+            // Назад
+            if (prev >= 1) {
+                backButton.href = `question_${prev}.html`;
+            } else {
+                backButton.style.display = "none";
+            }
+
+            // Вперед
+            if (next <= 20) { // Укажи здесь макс. номер
+                nextButton.href = `question_${next}.html`;
+            } else {
+                nextButton.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Вопрос 9</title>
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Вопрос №9</h1>
+    <h2>ДОЖДЛИВЫЙ КЛИМАТ</h2>
+    <p>
+      <br>Овьедо находится на севере Испании, в Астурии, у подножия Кантабрийских гор и недалеко от Бискайского залива,
+      а это значит: <em>влажный морской воздух + горы = много дождей.</em>
+      <br>
+      <br>Но даже если дождь застанет тебя в городе - всегда есть площадь, которая поможет.<br>В начале XX века на месте
+      площади была церковь, разрушенная в 1922 году. Затем там был рынок продуктов, а в 1926 году место выделили только
+      для продажи молока: туда приезжали женщины из деревень со своей молочной продукцией на ослах.
+      И для их защиты, в 1929 году, инженер Ильдефонсо Санчес дель Рио спроектировал и построил <em>одну из
+        достопримечательностей города</em>.
+    </p>
+    </p>
+    <p><strong>Для ответа надо:</strong>
+      <br>Сделать фото с достопримечательностью.
+  </div>
+  <div class="navigation-buttons">
+    <a id="backButton" class="question-button">Назад</a>
+    <a id="nextButton" class="question-button">Вперед</a>
+  </div>
+
+  <script>
+    // Определяем текущий номер страницы из URL
+    const path = window.location.pathname;
+    const match = path.match(/question_(\d+)\.html$/);
+
+    if (match) {
+      const current = parseInt(match[1], 10);
+      const prev = current - 1;
+      const next = current + 1;
+
+      const backButton = document.getElementById("backButton");
+      const nextButton = document.getElementById("nextButton");
+
+      // Назад
+      if (prev >= 1) {
+        backButton.href = `question_${prev}.html`;
+      } else {
+        backButton.style.display = "none";
+      }
+
+      // Вперед
+      if (next <= 20) { // Укажи здесь макс. номер
+        nextButton.href = `question_${next}.html`;
+      } else {
+        nextButton.style.display = "none";
+      }
+    }
+  </script>
+</body>
+
+</html>

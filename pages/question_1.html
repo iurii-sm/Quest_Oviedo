@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вопрос 1</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Вопрос №1</h1>
+        <h2>BABLE - АСТУРИЙСКИЙ ДИАЛЕКТ</h2>
+        <p>
+            <br>Вы знаете почему Овьедо пишется не только как Oviedo, но еще и <strong>Uviéu</strong>, а Хихон можно
+            писать Gijón или <strong>Xixón</strong>?
+            <br>Все потому, что это <strong>Bable</strong> - народное название астурийского языка, распространенного в
+            Астурии, именно в той провинции, где мы с вами живем. Есть даже Академия астурийского языка (Academia de la
+            Lingua Asturiana), которая с 1980 года разрабатывает словари, правила и нормы для Bable.
+        </p>
+        <p><strong>Для ответа надо:</strong>
+            <br>Найти аиста на Bable <strong>
+                <em2>(пять букв в слове)</em2>
+            </strong> и сделать фото с рыбой, которая рядом.
+            <br>Так как bable довольно необычный язык, то и аист выглядит непохожим на себя, больше похож на логотип
+            tripadvisor.
+        </p>
+    </div>
+    <div class="navigation-buttons">
+        <a id="backButton" class="question-button">Назад</a>
+        <a id="nextButton" class="question-button">Вперед</a>
+    </div>
+
+    <script>
+        // Определяем текущий номер страницы из URL
+        const path = window.location.pathname;
+        const match = path.match(/question_(\d+)\.html$/);
+
+        if (match) {
+            const current = parseInt(match[1], 10);
+            const prev = current - 1;
+            const next = current + 1;
+
+            const backButton = document.getElementById("backButton");
+            const nextButton = document.getElementById("nextButton");
+
+            // Назад
+            if (prev >= 1) {
+                backButton.href = `question_${prev}.html`;
+            } else {
+                backButton.style.display = "none";
+            }
+
+            // Вперед
+            if (next <= 20) { // Укажи здесь макс. номер
+                nextButton.href = `question_${next}.html`;
+            } else {
+                nextButton.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>
