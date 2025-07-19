@@ -145,3 +145,23 @@ img, video {
   display: block;
   margin: auto;
 }
+
+html, body {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  padding: 1em;
+  box-sizing: border-box;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1em auto;
+}
